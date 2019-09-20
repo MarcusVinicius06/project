@@ -16,10 +16,16 @@
 
 @section('content')
 <div class="row">
-    <div class="col-xs-12">
-      <div class="box">
+    <div class="col-xs-9">
+      <div class="box box-success">
         <div class="box-header">
           <h3 class="box-title">Lista de grupos de usuários</h3>
+          <div class="box-tools pull-right">
+            <a href="{{route('admin.group.create')}}" class="btn bg-olive">
+              <i class="fa fa-plus"></i>
+              Novo
+            </a>
+          </div>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
@@ -27,6 +33,7 @@
                 <thead>
                 <tr>
                   <th>Nome</th>
+                  <th>Permissões</th>
                   <th>Ações</th>
                 </tr>
                 </thead>
@@ -39,6 +46,10 @@
       <!-- /.box -->
     </div>
     <!-- /.col -->
+    <div class="col-xs-3">
+      @component('components.small-box', ['numRoles'=> $numRoles, 'numUsers'=> $numUsers])
+      @endcomponent
+    </div>
   </div>
 @stop
 
@@ -53,6 +64,7 @@
 
 @section('js')
 <script src="/js/roles/index.js"></script>
+<script src="/js/roles/store.js"></script>
 <script>
      const getDataRolesUrl = "{!!route('admin.group.getDataRoles')!!}";
      const createRolesUrl   = "{!!route('admin.group.create')!!}";

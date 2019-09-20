@@ -10,9 +10,9 @@ $(()=>{
             {data: "name",  name: "name"},
             {data: "email", name: "email", orderable: false},
             {data: "group", name: "group", orderable: false, render:function (group) {
-                var groups = [];
+                var groups = ``;
                 group.forEach(element => {
-                    groups.push(`<span class="label bg-blue">${element}</span>`);
+                    groups +=`<span class="label bg-blue">${element}</span> &nbsp;`;
                 });
 
                 return groups;

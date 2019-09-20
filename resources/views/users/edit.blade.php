@@ -16,7 +16,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-xs-10 col-xs-offset-1">
+        <div class="col-xs-9">
             <div class="box box-success">
                 <div class="box-header with-border">
                     <h3 class="box-title">Editar usuário</h3>
@@ -31,13 +31,17 @@
                     </div>
                     <!-- /.box-body -->
                     <div class="box-footer">
-                        <button type="button" class="btn btn-default">Cancel</button>
+                        <a href="{{ route('admin.users.index') }}" class="btn btn-default">Cancel</a>
                         <button type="submit" class="btn btn-success pull-right">Salvar</button>
                     </div>
                 </form>
                 <!-- box-footer -->
             </div>
             <!-- /.box -->
+        </div>
+        <div class="col-xs-3">
+            @component('components.small-box', ['numRoles'=> $roles->count(), 'numUsers'=> $user->count()])
+            @endcomponent
         </div>
     </div>
 @stop

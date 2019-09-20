@@ -12,7 +12,6 @@ use Spatie\Permission\Models\Permission;
 use RealRashid\SweetAlert\Facades\Alert;
 
 
-
 class UsersController extends Controller
 {
 
@@ -27,8 +26,8 @@ class UsersController extends Controller
     public function index()
     {
         $users = User::all();
-        $roles = Role::all();
-        return view('users.index', compact('users', 'roles'));
+        $numRoles = Role::all()->count();
+        return view('users.index', compact('users', 'numRoles'));
     }
 
     public function getDataUsers()
@@ -65,8 +64,9 @@ class UsersController extends Controller
     public function create()
     {
         $user  = new User();
+        $numUsers = User::all()->count();
         $roles = Role::all();
-        return view('users.create', compact('user', 'roles'));
+        return view('users.create', compact('user', 'numUsers', 'roles'));
     }
 
     /**
@@ -90,7 +90,7 @@ class UsersController extends Controller
         $user->assignRole($request->grupo);
         $user->save();
 
-        return redirect()->route('admin.users.index')->with('status', 'Usuário registrado com sucesso!');
+        return redirect()->route('admin.users.index')->with('success', 'Usuário registrado com sucesso!');
     }
 
     /**
@@ -139,7 +139,7 @@ class UsersController extends Controller
         $user->syncRoles($request->grupo);
         $user->save();
 
-        return redirect()->route('admin.users.index')->with('status', 'Usuário atualizado com sucesso!');
+        return redirect()->route('admin.users.index')->with('success', 'Usuário atualizado com sucesso!');
 
     }
 
@@ -152,7 +152,7 @@ class UsersController extends Controller
     public function destroy(User $user)
     {
         $user->delete();
-        return redirect()->route('admin.users.index')->with('status', 'Usuário deletado com sucesso!');
+        return redirect()->route('admin.users.index')->with('success', 'Usuário deletado com sucesso!');
     }
 
      /**

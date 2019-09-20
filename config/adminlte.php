@@ -32,7 +32,7 @@ return [
 
     'logo' => '<b>SIG</b>IFMG',
 
-    'logo_mini' => '<b>S</b>IG',
+    'logo_mini' => '<b>SIG</b>IF',
 
     /*
     |--------------------------------------------------------------------------
@@ -71,7 +71,7 @@ return [
     |
     */
 
-    'collapse_sidebar' => false,
+    'collapse_sidebar' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -289,7 +289,7 @@ return [
                 [
                     'type' => 'css',
                     'asset' => false,
-                    'location' => '//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-center-radar.min.css',
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/white/pace-theme-minimal.min.css',
                 ],
                 [
                     'type' => 'js',

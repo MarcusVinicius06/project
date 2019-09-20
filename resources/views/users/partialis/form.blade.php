@@ -25,11 +25,18 @@
         <label for="grupo">Grupos de usuários</label>
         <select class="form-control select2-group-users" name="grupo[]" multiple="multiple" data-placeholder="Selecione um grupo"
                 style="width: 100%;">
-            @foreach ($user->roles->all() as $role)
-                <option value="{{$role->name}}" selected>{{$role->name}}</option>
-            @endforeach
             @foreach ($roles as $role)
-                <option value="{{$role->name}}">{{$role->name}}</option>
+                <option value="{{$role->name}}"
+                    @isset($user->roles)
+                        @foreach ($user->roles as $userRole)
+                            @if ($userRole->name == $role->name)
+                                selected
+                            @endif
+                        @endforeach
+                    @endisset
+                >
+                    {{$role->name}}
+                </option>
             @endforeach
         </select>
         @error('grupo')

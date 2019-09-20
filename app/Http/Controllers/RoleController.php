@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 use Yajra\DataTables\Facades\DataTables;
+
 
 
 class RoleController extends Controller
@@ -16,7 +19,9 @@ class RoleController extends Controller
      */
     public function index()
     {
-        return view('roles.index');
+        $numUsers = User::all()->count();
+        $numRoles = Role::all()->count();
+        return view('roles.index', compact('numUsers', 'numRoles'));
     }
 
     public function getDataRoles()
@@ -24,11 +29,20 @@ class RoleController extends Controller
         $roles = Role::all();
 
         return DataTables::of($roles)
-            ->addColumn('action',function ($roles){
+            ->addColumn('action',function ($role){
                 return [
-                    'edit' =>  route('admin.group.edit', $roles),
-                    'delete' => route('admin.group.delete', $roles),
+                    'edit' =>  route('admin.group.edit', $role),
+                    'delete' => route('admin.group.destroy', $role),
                 ];
+            })
+            ->addColumn('permissions', function ($role)
+            {
+                $permissions = [];
+                foreach ($role->permissions()->get()->all() as $permission) {
+                    array_push($permissions, $permission->name);
+                }
+
+                return $permissions;
             })
             ->toJson();
     }
@@ -40,7 +54,10 @@ class RoleController extends Controller
      */
     public function create()
     {
-        return view('roles.create');
+        $users = User::all();
+        $roles = Role::all();
+        $permissions = Permission::all();
+        return view('roles.create', compact('users', 'roles', 'permissions'));
     }
 
     /**
@@ -52,14 +69,17 @@ class RoleController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'name' => 'required|unique:roles'
+            'name' => 'required|unique:roles',
+            'permission' => 'required'
         ]);
 
-        $role = new Role($request->all());
+        $role = new Role();
+        $role->name = $request->name;
         $role->guard_name = 'web';
+        $role->givePermissionTo($request->permission);
         $role->save();
 
-        return view('roles.index');
+        return redirect()->route('admin.group.index')->with('success', 'Grupo adicionado com sucesso!');
     }
 
     /**
@@ -80,32 +100,51 @@ class RoleController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Role  $role, $id)
     {
-        $role = Role::find($id);
-        return view('roles.edit', compact('role'));
+        $numUsers = User::all()->count();
+        $numRoles = Role::all()->count();
+        $permissions = Permission::all();
+        $role = Role::findById($id);
+        return view('roles.edit', compact('role', 'numRoles','numUsers', 'permissions'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \Spatie\Permission\Models\Role  $role
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Role $role)
+    public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,[
+            'name' => 'required',
+            'permission' => 'required'
+        ]);
+
+        $role = Role::find($id);
+        $role->syncPermissions($request->permission);
+        $role->name = $request->name;
+        $role->guard_name = 'web';
+        $role->save();
+
+        return redirect()->route('admin.group.index')->with('success', 'Grupo atualizado com sucesso!');
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param  \Spatie\Permission\Models\Role  $role
+     * @param int $id
+     *
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Role $role)
+    public function destroy(Role $role, $id)
     {
-        //
+        $role = Role::findOrFail($id);
+        $role->forceDelete();
+
+        return redirect()->route('admin.group.index')->with('success', 'Grupo deletado com sucesso!');
     }
 }
