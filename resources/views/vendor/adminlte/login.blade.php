@@ -40,14 +40,14 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-8">
-                        <div class="icheck-primary">
+                        <div class="icheck-success">
                             <input type="checkbox" name="remember" id="remember">
                             <label for="remember">{{ trans('adminlte::adminlte.remember_me') }}</label>
                         </div>
                     </div>
                     <!-- /.col -->
                     <div class="col-xs-4">
-                        <button type="submit" class="btn btn-primary btn-block btn-flat">
+                        <button type="submit" class="btn btn-success btn-block btn-flat">
                             {{ trans('adminlte::adminlte.sign_in') }}
                         </button>
                     </div>
