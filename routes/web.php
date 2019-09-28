@@ -26,7 +26,7 @@ Route::get('/eventos', ['as' => 'eventos', 'uses' => 'Portal\HomeController@page
 
 
 
-Route::group(['middleware' => 'role:administrador', 'prefix' => 'admin', 'as' => 'admin.'], function () {
+Route::group(['middleware' => 'role:admin', 'prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::get('users/getDataUsers', [ 'as' => 'users.getDataUsers', 'uses' => 'UsersController@getDataUsers' ]);
     Route::resource('users', 'UsersController');
 
