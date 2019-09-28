@@ -11,12 +11,13 @@
 |
 */
 
+Route::get('/', 'Portal\HomeController@index');
 
 Auth::routes();
 
-Route::get('/', 'Portal\HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/', ['as' => 'portal', 'uses' => 'Portal\HomeController@index']);
+Route::get('/portal', ['as' => 'portal', 'uses' => 'Portal\HomeController@index']);
 Route::get('/sobre', ['as' => 'sobre', 'uses' => 'Portal\HomeController@pageSobre']);
 Route::get('/depoimentos', ['as' => 'depoimentos', 'uses' => 'Portal\HomeController@pageDepoimentos']);
 Route::get('/oportunidades', ['as' => 'oportunidades', 'uses' => 'Portal\HomeController@pageOportunidades']);
