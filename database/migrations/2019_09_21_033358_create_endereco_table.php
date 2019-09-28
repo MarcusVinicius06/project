@@ -21,7 +21,10 @@ class CreateEnderecoTable extends Migration
             $table->string('bairro', 255);
             $table->string('estado', 100);
             $table->integer('cep');
+            $table->unsignedBigInteger('egresso_id');
             $table->timestamps();
+
+            $table->foreign('egresso_id')->references('id')->on('egressos');
         });
     }
 
