@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'Portal\HomeController@index')->name('home');
 
 Route::get('/portal', ['as' => 'portal', 'uses' => 'Portal\HomeController@index']);
 Route::get('/sobre', ['as' => 'sobre', 'uses' => 'Portal\HomeController@pageSobre']);
