@@ -15,8 +15,8 @@
             <img class="d-block w-100" src="{{ asset('img/carousel/formatura.JPG') }}" alt="First slide" height="500">
                 <div class="container">
                         <div class="carousel-caption">
-                        <h3 class="display-4">Depoimentos</h3>
-                        <p class="lead">Devido ao grande fluxo de ex-alunos do curso de Sistemas de Informação, o Portal do Egresso disponibiliza uma área reservada para depoimentos de egressos formados na área em questão já atuando no mercado de trabalho.</p>
+                        <h1>Depoimentos</h1>
+                        <p>Devido ao grande fluxo de ex-alunos do curso de Sistemas de Informação, o Portal do Egresso disponibiliza uma área reservada para depoimentos de egressos formados na área em questão já atuando no mercado de trabalho.</p>
                         <p><a class="btn btn-success btn-lg" href="{{ route('depoimentos') }}" role="button">veja mais</a></p>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
             <img class="d-block w-100" src="{{ asset('img/carousel/paletra-02.jpg') }}" alt="Second slide" height="500">
                 <div class="container">
                     <div class="carousel-caption">
-                      <h3 class="display-4">Eventos</h3>
+                      <h1>Eventos</h1>
                       <p>Durante o ano são realizados diversos eventos que visão fomentar o desenvolvimento intelectual de seus alunos e ex-alunos, assim sendo o Portal do Egresso disponibiliza uma sessão inteiramente voltada para eventos internos do Campus de São João Evangelista.</p>
                       <p><a class="btn btn-success btn-lg" href="{{ route('eventos') }}" role="button">Veja mais</a></p>
                     </div>
@@ -37,7 +37,7 @@
             <img class="d-block w-100" src="{{ asset('img/carousel/oportunidades.png') }}" alt="Third slide" height="500">
                 <div class="container">
                     <div class="carousel-caption">
-                      <h3 class="display-4">Oportunidade</h3>
+                      <h1>Oportunidade</h1>
                       <p>O sucesso no mercado de trabalho e na vida pessoal dos nossos egressos é, também, o nosso sucesso. Devido á isso o Portal do Egresso disponibiliza uma guia com varias oportunidades de emprego sempre atualizadas para egressos cadastrados no nosso portal.</p>
                       <p><a class="btn btn-success btn-lg" href="{{ route('oportunidades') }}" role="button">veja mais</a></p>
                     </div>
@@ -380,8 +380,6 @@
         background-size: cover;
       }
 
-      .carousel-caption {
-        font-size: large;
-      }
+    
     </style>
 @endsection
