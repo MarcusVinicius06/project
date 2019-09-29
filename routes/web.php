@@ -34,6 +34,6 @@ Route::group(['middleware' => 'role:admin', 'prefix' => 'admin', 'as' => 'admin.
     Route::resource('group', 'RoleController');
 });
 
-Route::group(['middleware' => 'permission:user', 'prefix' => 'settings'], function () {
+Route::group(['middleware' => 'role:user', 'prefix' => 'settings'], function () {
     Route::get('profile', ['as' => 'profile', 'uses'  => 'UsersController@profile']);
 });

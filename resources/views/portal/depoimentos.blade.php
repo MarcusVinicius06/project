@@ -2,7 +2,7 @@
 
 @section('content')
 @component('portal.components.header', ['urlImg'=> asset('img/depoimentos-header.JPG') ])
-    <h1>Depoimentos</h1>
+  <h3 class="display-4">Depoimentos</h3>
 @endcomponent
 
 <section class="my-4">

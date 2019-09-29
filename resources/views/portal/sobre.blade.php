@@ -3,7 +3,7 @@
 @section('content')
 
 @component('portal.components.header', ['urlImg'=> asset('img/egressos-header.jpg') ])
-    <h1>Portal do Egresso</h1>
+    <h3 class="display-4">Portal do Egresso</h3>
 @endcomponent
 
 <section class="my-4">
@@ -29,7 +29,7 @@
         <div class="col-md-6">
             <div class="container text-center">
                 <figure class="figure">
-                    <img class="card-img-right flex-auto d-none d-md-block" width="100%" height="330" src="http://placehold.it/600x330" alt="Card image cap">
+                    <img class="card-img-right flex-auto d-none d-md-block" width="100%" height="330" src="{{ asset('img/carousel/formatura.JPG') }}" alt="Card image cap">
                 </figure>
             </div>
         </div>

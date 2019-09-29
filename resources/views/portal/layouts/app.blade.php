@@ -23,6 +23,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/portal/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/portal/portal.css') }}">
+    @yield('portal_header_css')
     @yield('portal_css')
 </head>
 <body>

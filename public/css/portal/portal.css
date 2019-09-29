@@ -107,5 +107,36 @@ main {
   font-weight: normal;
 }
 
+.btn-success {
+  color: #fff;
+  background-color: #40842e;
+  border-color: #40842e;
+}
+.btn-success:hover {
+  color: #fff;
+  background-color: #40842e;
+  border-color: #a4cda9;
+}
+.btn-outline-success {
+    color: #389c42 !important;;
+    border-color: #389c42;
+}
 
+.btn-outline-success:hover {
+    color: #fff !important;
+    background-color: #389c42;
+    border-color: #389c42;
+}
 
+.page-link{
+  color: #40842e;
+}
+
+.page-link:hover{
+  color: #40842ea3;
+}
+
+.page-link:focus{
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(64, 132, 46, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(64, 132, 46, 0.25);
+}

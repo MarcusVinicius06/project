@@ -1,11 +1,11 @@
-@section('portal_css')
+@section('portal_header_css')
 <style>
     .intro-2 {
     background: url("{!! $urlImg !!}")no-repeat center center;
     background-size: cover;
     }
 </style>
-    
+
 @endsection
 
 <header>

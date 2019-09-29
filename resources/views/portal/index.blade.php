@@ -10,33 +10,36 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
-            <div class="carousel-item active">
-            <img class="d-block w-100" src="http://placehold.it/900x350" alt="First slide">
+          <div class="carousel-item active">
+            <div class="capa"></div>
+            <img class="d-block w-100" src="{{ asset('img/carousel/formatura.JPG') }}" alt="First slide" height="500">
                 <div class="container">
-                        <div class="carousel-caption text-left">
-                        <h1>One more for good measure.</h1>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                        <div class="carousel-caption">
+                        <h3 class="display-4">Depoimentos</h3>
+                        <p class="lead">Devido ao grande fluxo de ex-alunos do curso de Sistemas de Informação, o Portal do Egresso disponibiliza uma área reservada para depoimentos de egressos formados na área em questão já atuando no mercado de trabalho.</p>
+                        <p><a class="btn btn-success btn-lg" href="{{ route('depoimentos') }}" role="button">veja mais</a></p>
                         </div>
                     </div>
                 </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="http://placehold.it/900x350" alt="Second slide">
+            <div class="capa"></div>
+            <img class="d-block w-100" src="{{ asset('img/carousel/paletra-02.jpg') }}" alt="Second slide" height="500">
                 <div class="container">
                     <div class="carousel-caption">
-                      <h1>One more for good measure.</h1>
-                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                      <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                      <h3 class="display-4">Eventos</h3>
+                      <p>Durante o ano são realizados diversos eventos que visão fomentar o desenvolvimento intelectual de seus alunos e ex-alunos, assim sendo o Portal do Egresso disponibiliza uma sessão inteiramente voltada para eventos internos do Campus de São João Evangelista.</p>
+                      <p><a class="btn btn-success btn-lg" href="{{ route('eventos') }}" role="button">Veja mais</a></p>
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="http://placehold.it/900x350" alt="Third slide">
+            <div class="capa"></div>
+            <img class="d-block w-100" src="{{ asset('img/carousel/oportunidades.png') }}" alt="Third slide" height="500">
                 <div class="container">
-                    <div class="carousel-caption text-right">
-                      <h1>One more for good measure.</h1>
-                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                      <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                    <div class="carousel-caption">
+                      <h3 class="display-4">Oportunidade</h3>
+                      <p>O sucesso no mercado de trabalho e na vida pessoal dos nossos egressos é, também, o nosso sucesso. Devido á isso o Portal do Egresso disponibiliza uma guia com varias oportunidades de emprego sempre atualizadas para egressos cadastrados no nosso portal.</p>
+                      <p><a class="btn btn-success btn-lg" href="{{ route('oportunidades') }}" role="button">veja mais</a></p>
                     </div>
                 </div>
             </div>
@@ -238,8 +241,11 @@
 
 <!-- section Evento -->
 <section class="section events imagem" style="padding: 3.5rem 0;"  >
-    <div class="capa  " ></div>
+    <div class="capa" ></div>
     <div class="container marketing">
+      <div class="featurette text-center  ">
+        <h1 class="title-section">Eventos</h1>
+      </div>
       <!-- START THE FEATURETTES -->
       <div class="row featurette">
         <div class="col-md-7">
@@ -254,7 +260,7 @@
           </p>
         </div>
         <div class="col-md-5">
-          <img  width="100%" height="300" src="http://placehold.it/600x350"  class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" alt="Sia">
+          <img  width="100%" height="300" src="{{ asset('img/home/sia.jpg') }}"  class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" alt="SIA">
         </div>
       </div>
       <hr class="my-4">
@@ -266,7 +272,7 @@
         </div>
         <div class="col-md-5 order-md-1">
           <!-- <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" data-src="holder.js/600x400?auto=yes&theme=thumb" alt="Card image cap"> -->
-          <img  width="100%" height="300" src="http://placehold.it/600x350"  class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" alt="Encontro1">
+          <img  width="100%" height="300" src="{{ asset('img/home/eg1.jpg') }}"  class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" alt="Encontro1">
         </div>
       </div>
       <!-- END THE FEATURETTES -->
@@ -287,16 +293,7 @@
 
 @section('portal_css')
     <style>
-        .btn-outline-success {
-            color: #389c42 !important;;
-            border-color: #389c42;
-        }
-
-        .btn-outline-success:hover {
-            color: #fff !important;
-            background-color: #389c42;
-            border-color: #389c42;
-        }
+      
         .title-section{
             padding-bottom: 2rem;
             padding-top: 2rem;
@@ -326,7 +323,7 @@
           top: 0;
         }
       .events{
-        background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg");
+        background-image: url("img/carousel/paletra.jpg");
         background-repeat: no-repeat;
         background-size: cover;
       }
@@ -371,6 +368,20 @@
 
       .controls:hover{
         background-color: #0000002e;
+      }
+
+      .carousel-item {
+        height: 65vh;
+        min-height: 350px;
+        background: no-repeat center center scroll;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+      .carousel-caption {
+        font-size: large;
       }
     </style>
 @endsection

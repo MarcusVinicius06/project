@@ -3,8 +3,12 @@
 @section('content')
 
 @component('portal.components.header', ['urlImg'=> asset('img/oportunidades.png') ])
-    <h1>Oportunidades</h1>
+  <h3 class="display-4">Oportunidades</h3>
 @endcomponent
+
+@section('portal_csss')
+
+@endsection
 
 <section class="my-4">
 
@@ -13,72 +17,53 @@
 
                 <!-- Project One -->
                 <div class="row">
-                  <div class="col-md-7">
-                    <a href="#">
-                      <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+                  <div class="col-md-5">
+                    <a href="https://www.vagas.com.br/institucional/">
+                      <img class="img-fluid rounded mb-3 mb-md-0" src="{{ asset('img/oportunidades/vagas.png') }}" alt="">
                     </a>
                   </div>
-                  <div class="col-md-5">
-                    <h3>Project One</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
-                    <a class="btn btn-primary" href="#">View Project</a>
+                  <div class="col-md-7">
+                    <h2>Vagas.com</h2>
+                    <p>Desenvolver soluções tecnológicas para encontrar e selecionar os melhores talentos para as empresas. Para os candidatos, promover o desenvolvimento em suas carreiras para que encontrem as melhores empresas, gratuitamente.</p>
+                    <a class="btn btn-outline-success" href="https://www.vagas.com.br/institucional/">Veja mais</a>
                   </div>
                 </div>
                 <!-- /.row -->
 
-                <hr>
+                <hr class="my-4">
 
                 <!-- Project Two -->
                 <div class="row">
-                  <div class="col-md-7">
-                    <a href="#">
-                      <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+                  <div class="col-md-5">
+                    <a href="https://www.catho.com.br/lp/acathofunciona/home?utm_expid=.fPgmK4iATz699aGeY7oy1w.1&utm_referrer=https%3A%2F%2Fdev.sje.ifmg.edu.br%2Fegressosbsi%2Foportunidades.html">
+                      <img class="img-fluid rounded mb-3 mb-md-0" src="{{ asset('img/oportunidades/emp.jpg') }}" alt="">
                     </a>
                   </div>
-                  <div class="col-md-5">
-                    <h3>Project Two</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.</p>
-                    <a class="btn btn-primary" href="#">View Project</a>
+                  <div class="col-md-7">
+                    <h2>Catho</h2>
+                    <p>A Catho é direcionada para todos aqueles que buscam agilidade no processo de recolocação, desde diretores até estagiários.</p>
+                    <a class="btn btn-outline-success" href="https://www.catho.com.br/lp/acathofunciona/home?utm_expid=.fPgmK4iATz699aGeY7oy1w.1&utm_referrer=https%3A%2F%2Fdev.sje.ifmg.edu.br%2Fegressosbsi%2Foportunidades.html">Veja mais</a>
                   </div>
                 </div>
                 <!-- /.row -->
 
-                <hr>
+                <hr class="my-4">
 
                 <!-- Project Three -->
                 <div class="row">
-                  <div class="col-md-7">
-                    <a href="#">
-                      <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+                  <div class="col-md-5">
+                    <a href="https://www.empregos.com.br/">
+                      <img class="img-fluid rounded mb-3 mb-md-0" src="{{ asset('img/oportunidades/empreg.jpg') }}" alt="">
                     </a>
                   </div>
-                  <div class="col-md-5">
-                    <h3>Project Three</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus!</p>
-                    <a class="btn btn-primary" href="#">View Project</a>
+                  <div class="col-md-7">
+                    <h2>Empregos.com.br</h2>
+                    <p>Hoje com mais de 4.6 milhões de currículos profissionais, uma margem de 170 mil empresas cadastradas em seu sistema e mais de 120 mil vagas disponíveis em todo o país.</p>
+                    <a class="btn btn-outline-success" href="https://www.empregos.com.br/">Veja mais</a>
                   </div>
                 </div>
                 <!-- /.row -->
-
-                <hr>
-
-                <!-- Project Four -->
-                <div class="row">
-
-                  <div class="col-md-7">
-                    <a href="#">
-                      <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
-                    </a>
-                  </div>
-                  <div class="col-md-5">
-                    <h3>Project Four</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?</p>
-                    <a class="btn btn-primary" href="#">View Project</a>
-                  </div>
-                </div>
-                <!-- /.row -->
-
-                <hr>
+                <hr class="my-4">
 
                 <!-- Pagination -->
                 <ul class="pagination justify-content-center">
@@ -90,12 +75,6 @@
                   </li>
                   <li class="page-item">
                     <a class="page-link" href="#">1</a>
-                  </li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">2</a>
-                  </li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">3</a>
                   </li>
                   <li class="page-item">
                     <a class="page-link" href="#" aria-label="Next">
