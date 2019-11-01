@@ -17,7 +17,7 @@ class CreateEnderecoTable extends Migration
             $table->bigIncrements('id');
             $table->string('rua', 255);
             $table->integer('numero');
-            $table->string('complemento', 255)->nullable();
+            $table->string('cidade', 255)->nullable();
             $table->string('bairro', 255);
             $table->string('estado', 100);
             $table->integer('cep');

@@ -20,7 +20,6 @@ class HomeController extends Controller
     public function pageDepoimentos()
     {
         return view('portal.depoimentos');
-
     }
 
     public function pageOportunidades()
@@ -31,6 +30,10 @@ class HomeController extends Controller
     public function pageEventos()
     {
         return view('portal.eventos');
+    }
 
+    public function register2()
+    {
+        return view('auth.login-portal');
     }
 }

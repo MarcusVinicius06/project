@@ -69,6 +69,7 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{ route('register') }}">{{ __('Cadastrar-se') }}</a>
                                     </li>
+                                    <li><a href="{{ route('register_2') }}">Register 2</a></li>
                                 @endif
                             @else
                                 <li class="nav-item dropdown">
@@ -113,6 +114,7 @@
     <script src="{{ asset('js/portal/font-awesome/all.min.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/portal/portal.js') }}"></script>
+    <script src="{{ asset('vendor/sweetalert/sweetalert.all.js') }}"></script>
 
     @yield('portal_js')
 </body>

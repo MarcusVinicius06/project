@@ -16,7 +16,8 @@
                 <div class="container">
                         <div class="carousel-caption">
                         <h1>Depoimentos</h1>
-                        <p>Devido ao grande fluxo de ex-alunos do curso de Sistemas de Informação, o Portal do Egresso disponibiliza uma área reservada para depoimentos de egressos formados na área em questão já atuando no mercado de trabalho.</p>
+                        <p>Devido ao grande fluxo de ex-alunos do curso de Sistemas de Informação, o Portal do Egresso disponibiliza uma área reservada para depoimentos de egressos formados na área em questão já atuando no mercado de trabalho.
+                        </p>
                         <p><a class="btn btn-success btn-lg" href="{{ route('depoimentos') }}" role="button">veja mais</a></p>
                         </div>
                     </div>
@@ -86,16 +87,16 @@
                   <!-- /Controls-->
 
                   <!--Slides-->
-                  <div class="carousel-inner" role="listbox">
+                  <div class="carousel-inner carousel-inner-depoimentos" role="listbox">
 
                     <!--First slide-->
-                    <div class="carousel-item active">
+                    <div class="carousel-item carousel-item-depoimentos active">
 
                       <div class="row">
                         <div class="col-md-4">
                           <div class="card mb-2 shadow-sm">
                             <div class="card-body text-center ">
-                                <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+                                <img class="rounded-circle rounded-circle-depoimentos" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
                                   alt="Card image cap">
                               <h4 class="card-title">Card title</h4>
                               <p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the
@@ -108,7 +109,7 @@
                         <div class="col-md-4 clearfix d-none d-md-block">
                           <div class="card mb-2 shadow-sm">
                             <div class="card-body text-center">
-                                <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
+                                <img class="rounded-circle rounded-circle-depoimentos" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
                                 alt="Card image cap">
                               <h4 class="card-title">Card title</h4>
                               <p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the
@@ -121,7 +122,7 @@
                         <div class="col-md-4 clearfix d-none d-md-block">
                           <div class="card mb-2 shadow-sm">
                             <div class="card-body text-center">
-                                <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
+                                <img class="rounded-circle rounded-circle-depoimentos" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
                                   alt="Card image cap">
                               <h4 class="card-title">Card title</h4>
                               <p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the
@@ -136,13 +137,13 @@
                     <!--/.First slide-->
 
                     <!--Second slide-->
-                    <div class="carousel-item">
+                    <div class="carousel-item carousel-item-depoimentos">
 
                       <div class="row">
                         <div class="col-md-4">
                           <div class="card mb-2 shadow-sm">
                             <div class="card-body text-center">
-                                <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
+                                <img class="rounded-circle rounded-circle-depoimentos" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
                                   alt="Card image cap">
                               <h4 class="card-title">Card title</h4>
                               <p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the
@@ -155,7 +156,7 @@
                         <div class="col-md-4 clearfix d-none d-md-block">
                           <div class="card mb-2 shadow-sm">
                             <div class="card-body text-center">
-                                <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg"
+                                <img class="rounded-circle rounded-circle-depoimentos" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg"
                                   alt="Card image cap">
                               <h4 class="card-title">Card title</h4>
                               <p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the
@@ -168,7 +169,7 @@
                         <div class="col-md-4 clearfix d-none d-md-block">
                           <div class="card mb-2 shadow-sm">
                             <div class="card-body text-center">
-                                <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
+                                <img class="rounded-circle rounded-circle-depoimentos" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
                                   alt="Card image cap">
                               <h4 class="card-title">Card title</h4>
                               <p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the
@@ -183,13 +184,13 @@
                     <!--/.Second slide-->
 
                     <!--Third slide-->
-                    <div class="carousel-item">
+                    <div class="carousel-item carousel-item-depoimentos">
 
                       <div class="row">
                         <div class="col-md-4">
                           <div class="card mb-2 shadow-sm">
                             <div class="card-body text-center">
-                                <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(53).jpg"
+                                <img class="rounded-circle rounded-circle-depoimentos" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(53).jpg"
                                   alt="Card image cap">
                               <h4 class="card-title">Card title</h4>
                               <p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the
@@ -202,11 +203,11 @@
                         <div class="col-md-4 clearfix d-none d-md-block">
                           <div class="card mb-2 shadow-sm">
                             <div class="card-body text-center">
-                                <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(45).jpg"
+                                <img class="rounded-circle rounded-circle-depoimentos" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(45).jpg"
                                   alt="Card image cap">
                               <h4 class="card-title">Card title</h4>
                               <p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the
-                                card's content.</p>
+                                card's content. sandkjbkashdb as kjd as daksd ash kk da </p>
                               <a class="btn btn-outline-success">Button</a>
                             </div>
                           </div>
@@ -215,7 +216,7 @@
                         <div class="col-md-4 clearfix d-none d-md-block">
                           <div class="card mb-2 shadow-sm">
                             <div class="card-body text-center">
-                                <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(51).jpg"
+                                <img class="rounded-circle rounded-circle-depoimentos" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(51).jpg"
                                   alt="Card image cap">
                               <h4 class="card-title">Card title</h4>
                               <p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the
@@ -293,13 +294,13 @@
 
 @section('portal_css')
     <style>
-      
+
         .title-section{
             padding-bottom: 2rem;
             padding-top: 2rem;
             color: #389c42;
             font-weight: 400;
-            font-size: 50px;
+            font-size: 2.8rem;
             font-weight: 300;
             line-height: 1;
             letter-spacing: -.05rem;
@@ -342,7 +343,7 @@
         font-weight: 400;
         line-height: 1;
         letter-spacing: -.05rem;
-        font-size: 2.8rem;
+        font-size: 2.5rem;
       }
 
       .link-home{
@@ -380,6 +381,6 @@
         background-size: cover;
       }
 
-    
+
     </style>
 @endsection

@@ -23,7 +23,7 @@ Route::get('/depoimentos', ['as' => 'depoimentos', 'uses' => 'Portal\HomeControl
 Route::get('/oportunidades', ['as' => 'oportunidades', 'uses' => 'Portal\HomeController@pageOportunidades']);
 Route::get('/eventos', ['as' => 'eventos', 'uses' => 'Portal\HomeController@pageEventos']);
 
-
+Route::get('/register2', ['as' => 'register_2', 'uses' => 'Portal\HomeController@register2']);
 
 
 Route::group(['middleware' => 'role:admin', 'prefix' => 'admin', 'as' => 'admin.'], function () {
